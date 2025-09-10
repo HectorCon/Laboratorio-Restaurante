@@ -1,0 +1,152 @@
+/* Variables de diseño */
+:root {
+  --color-primario: #8d5524;
+  --color-secundario: #c68642;
+  --color-fondo: #fff8f0;
+  --color-texto: #222;
+  --color-acento: #e0ac69;
+  --espaciado: 1.5rem;
+  --fuente-principal: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+  font-family: var(--fuente-principal);
+  background: var(--color-fondo);
+  color: var(--color-texto);
+  margin: 0;
+}
+
+header, nav, main, section, footer {
+  padding: var(--espaciado) 0;
+}
+
+.btn-custom {
+  background: var(--color-primario);
+  color: #fff;
+  border-radius: 2rem;
+  padding: 0.75rem 2rem;
+  border: none;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+.btn-custom:hover, .btn-custom:focus {
+  background: var(--color-acento);
+  color: var(--color-texto);
+}
+
+.card-servicio {
+  border: 1px solid var(--color-acento);
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 2px 8px #0001;
+  padding: var(--espaciado);
+  margin-bottom: var(--espaciado);
+  text-align: center;
+}
+
+footer {
+  background: var(--color-primario);
+  color: #fff;
+  text-align: center;
+  padding: 2rem 0 1rem 0;
+}
+
+footer a {
+  color: #fff;
+  margin: 0 0.5rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icons a {
+  color: var(--color-primario);
+  font-size: 1.5rem;
+  transition: color 0.2s;
+}
+.social-icons a:hover, .social-icons a:focus {
+  color: var(--color-acento);
+}
+
+@media (max-width: 768px) {
+  .card-servicio {
+    margin-bottom: 1rem;
+  }
+  header, nav, main, section, footer {
+    padding: 1rem 0;
+  }
+}
+
+/* Pestaña lateral de horarios */
+.tab-horarios {
+  position: fixed;
+  top: 40%;
+  right: 0;
+  z-index: 1050;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  outline: none;
+}
+.tab-horarios-btn {
+  background: var(--color-primario);
+  color: #fff;
+  border: none;
+  border-radius: 1rem 0 0 1rem;
+  padding: 1rem 1.2rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #0002;
+  transition: background 0.2s;
+  outline: none;
+}
+.tab-horarios-btn:focus {
+  background: var(--color-acento);
+}
+.tab-horarios-content {
+  background: #fff;
+  color: var(--color-texto);
+  min-width: 220px;
+  max-width: 260px;
+  border-radius: 1rem 0 0 1rem;
+  box-shadow: 0 2px 12px #0003;
+  padding: 1.2rem 1.5rem 1.2rem 1.2rem;
+  margin-right: 0.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(100%);
+  transition: all 0.3s cubic-bezier(.4,2,.6,1);
+  outline: none;
+}
+.tab-horarios.open .tab-horarios-content {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0);
+}
+.tab-horarios.open .tab-horarios-btn {
+  background: var(--color-acento);
+  color: var(--color-texto);
+}
+.tab-horarios-content h5 {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.tab-horarios-content ul {
+  padding-left: 1rem;
+  font-size: 1rem;
+}
+@media (max-width: 600px) {
+  .tab-horarios-content {
+    min-width: 160px;
+    max-width: 90vw;
+    padding: 1rem 0.7rem 1rem 0.7rem;
+  }
+  .tab-horarios-btn {
+    font-size: 1.2rem;
+    padding: 0.7rem 0.8rem;
+  }
+}

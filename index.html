@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <html lang="es">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Restaurante S.A. - Desayunos, almuerzos y cenas deliciosos. Conoce nuestros servicios, equipo y misión.">
+      <title>Restaurante S.A.</title>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+      <link rel="stylesheet" href="src/restaurante.css">
+      <link rel="icon" href="public/vite.svg">
+      <style>body { min-height: 100vh; }</style>
+    </head>
+    <body>
+      <header class="container-fluid bg-white shadow-sm">
+        <nav class="navbar navbar-expand-lg" aria-label="Menú principal">
+          <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+              <img src="public/vite.svg" alt="Logo Restaurante S.A." width="40" height="40" class="me-2">
+              <span class="fw-bold">Restaurante S.A.</span>
+            </a>
+            <button class="navbar-toggler" id="menu-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú de navegación">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+                <li class="nav-item"><a class="nav-link" href="#equipo">Equipo</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                <li class="nav-item"><a class="nav-link" href="#mision">Misión</a></li>
+                <li class="nav-item"><a class="nav-link" href="#vision">Visión</a></li>
+                <li class="nav-item"><a class="nav-link" href="#login">Login</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <main class="container my-5">
+        <section class="text-center mb-5">
+          <h1 class="display-4 fw-bold">¡Bienvenido a Restaurante S.A.!</h1>
+          <p class="lead">Desayunos, almuerzos y cenas para todos los gustos. ¡Descubre nuestra experiencia culinaria!</p>
+          <a href="#servicios" class="btn btn-custom me-2">Ver Servicios</a>
+          <a href="#contacto" class="btn btn-outline-secondary">Contáctanos</a>
+        </section>
+        <section id="servicios" class="mb-5">
+          <h2 class="mb-4 text-center">Nuestros Servicios</h2>
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+            <div class="col">
+              <div class="card-servicio h-100">
+                <img src="img/desayuno.jpg" alt="Desayunos" class="img-fluid rounded mb-3" loading="lazy">
+                <h3>Desayunos</h3>
+                <p>Empieza tu día con energía. Variedad de opciones saludables y deliciosas.</p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card-servicio h-100">
+                <img src="img/almuerzo.jpg" alt="Almuerzos" class="img-fluid rounded mb-3" loading="lazy">
+                <h3>Almuerzos</h3>
+                <p>Platos frescos y balanceados para tu jornada laboral o familiar.</p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card-servicio h-100">
+                <img src="img/cena.jpg" alt="Cenas" class="img-fluid rounded mb-3" loading="lazy">
+                <h3>Cenas</h3>
+                <p>Disfruta de una cena especial en un ambiente acogedor.</p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card-servicio h-100">
+                <img src="img/eventos.jpg" alt="Eventos" class="img-fluid rounded mb-3" loading="lazy">
+                <h3>Eventos</h3>
+                <p>Organizamos tus eventos y celebraciones con el mejor servicio.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="mision" class="mb-5">
+          <h2 class="text-center">Misión</h2>
+          <p class="text-center">Brindar experiencias gastronómicas memorables, con ingredientes frescos y atención personalizada.</p>
+        </section>
+        <section id="vision" class="mb-5">
+          <h2 class="text-center">Visión</h2>
+          <p class="text-center">Ser el restaurante preferido de la ciudad, reconocido por calidad, innovación y calidez humana.</p>
+        </section>
+        <section id="equipo" class="mb-5">
+          <h2 class="text-center">Nuestro Equipo</h2>
+          <p class="text-center">Profesionales apasionados por la cocina y el servicio.</p>
+        </section>
+        <section id="contacto" class="mb-5">
+          <h2 class="text-center">Contacto</h2>
+          <form class="mx-auto" style="max-width: 400px;">
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="nombre" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Correo electrónico</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="mensaje" class="form-label">Mensaje</label>
+              <textarea class="form-control" id="mensaje" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-custom w-100">Enviar</button>
+          </form>
+        </section>
+        <section class="text-center mb-5">
+          <div class="social-icons" aria-label="Redes sociales">
+            <a href="#" aria-label="Facebook" tabindex="0"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Instagram" tabindex="0"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Twitter" tabindex="0"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="WhatsApp" tabindex="0"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <div class="container">
+          <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <div>
+              <small>&copy; 2025 Restaurante S.A. Todos los derechos reservados.</small>
+            </div>
+            <div class="social-icons mt-2 mt-md-0">
+              <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            </div>
+          </div>
+          <div class="mt-2">
+            <small><a href="#" class="text-white">Aviso legal</a> | <a href="#" class="text-white">Política de privacidad</a></small>
+          </div>
+        </div>
+      </footer>
+        <!-- Pestaña lateral de horarios -->
+        <div id="tab-horarios" class="tab-horarios" tabindex="0" aria-label="Ver horarios de atención">
+          <button id="tab-horarios-btn" class="tab-horarios-btn" aria-expanded="false" aria-controls="tab-horarios-content">
+            <span id="tab-horarios-icon">⏰</span>
+          </button>
+          <div id="tab-horarios-content" class="tab-horarios-content" aria-hidden="true">
+            <h5 class="mb-2">Horarios de Atención</h5>
+            <ul class="list-unstyled mb-0">
+              <li><strong>Lunes a Viernes:</strong> 7:00 - 22:00</li>
+              <li><strong>Sábado:</strong> 8:00 - 23:00</li>
+              <li><strong>Domingo:</strong> 8:00 - 18:00</li>
+            </ul>
+          </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <script src="src/restaurante.js"></script>
+        <script>
+          // Lógica de la pestaña de horarios
+          const tabBtn = document.getElementById('tab-horarios-btn');
+          const tabContent = document.getElementById('tab-horarios-content');
+          tabBtn.addEventListener('click', () => {
+            const expanded = tabBtn.getAttribute('aria-expanded') === 'true';
+            tabBtn.setAttribute('aria-expanded', !expanded);
+            tabContent.setAttribute('aria-hidden', expanded);
+            document.getElementById('tab-horarios').classList.toggle('open');
+          });
+          // Accesibilidad: cerrar con Escape
+          document.getElementById('tab-horarios').addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+              tabBtn.setAttribute('aria-expanded', 'false');
+              tabContent.setAttribute('aria-hidden', 'true');
+              document.getElementById('tab-horarios').classList.remove('open');
+              tabBtn.focus();
+            }
+          });
+        </script>
+      </body>
+      </html>
